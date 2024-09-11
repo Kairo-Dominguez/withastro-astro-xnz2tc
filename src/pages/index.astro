@@ -1,0 +1,35 @@
+---
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Project</title>
+    <link href="/styles/global.css" rel="stylesheet">
+</head>
+<body>
+    <Nav />
+</body>
+</html>
+
+  <Layout title="MF DOOM">
+    <main class="h-screen w-screen bg-[url('/background/Control-V.jpg')] bg-cover bg-center flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl text-white font-bold leading-tight font-mono">
+                <span class="text-white">Welcome To </span>
+                <span class="text-white">MF</span>
+                <span class="text-green-800">DOOM'S</span>
+                <span class="text-white">website.</span>
+            </h1>
+        </div>
+    </main>
+</Layout>
+
+
+
+
+

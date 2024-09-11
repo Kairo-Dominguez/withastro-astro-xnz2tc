@@ -1,0 +1,104 @@
+---
+/* No special imports needed for Tailwind CSS if you have it set up globally. */
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Fire Effect Navigation and Footer</title>
+    <link href="/styles/global.css" rel="stylesheet">
+    <style>
+        /* Green fire animation */
+        @keyframes green-fire {
+            0% {
+                text-shadow: 0 0 4px #00ff00, 0 0 6px #00ff00, 0 0 8px #00ff00, 0 0 10px #00ff00;
+            }
+            50% {
+                text-shadow: 0 0 6px #00ff00, 0 0 10px #00ff00, 0 0 14px #00ff00, 0 0 18px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 4px #00ff00, 0 0 6px #00ff00, 0 0 8px #00ff00, 0 0 10px #00ff00;
+            }
+        }
+
+        /* Apply the green fire effect on hover */
+        .fire-effect {
+            display: inline-block; /* Ensure the effect is applied properly */
+        }
+
+        .fire-effect:hover {
+            animation: green-fire 1s infinite;
+            color: #00ff00; /* Change text color on hover to green */
+        }
+    </style>
+</head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link href="/styles/global.css" rel="stylesheet">
+    <style>
+        /* Custom styles for footer text sizes */
+        @media (min-width: 640px) {
+            footer .text-lg {
+                font-size: 1.125rem; /* 18px */
+            }
+        }
+
+        @media (min-width: 768px) {
+            footer .text-xl {
+                font-size: 1.25rem; /* 20px */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            footer .text-2xl {
+                font-size: 1.5rem; /* 24px */
+            }
+        }
+
+        @media (min-width: 1280px) {
+            footer .text-2xl {
+                font-size: 1.75rem; /* 28px */
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="bg-black text-white py-6">
+        <div class="container mx-auto flex flex-col items-center space-y-4">
+            <!-- Navigation Links -->
+            <div class="flex space-x-6 text-lg md:text-xl lg:text-2xl">
+                <a href="/" class="fire-effect hover:text-green-800 transition-all duration-300">Home</a>
+                <a href="/about" class="fire-effect hover:text-green-800 transition-all duration-300">About</a>
+                <a href="/gallery" class="fire-effect hover:text-green-800 transition-all duration-300">Gallery</a>
+                <a href="/albums" class="fire-effect hover:text-green-800 transition-all duration-300">Albums</a>
+            </div>
+            <!-- Copyright Message -->
+            <div class="text-sm md:text-base lg:text-lg mt-4">
+                <p>Copyright &copy; <span id="current-year"></span> All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set the current year in the copyright notice
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
+    <script>
+        // Set the current year in the copyright notice
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
